@@ -30,6 +30,10 @@ export const App = () => {
 		}
 	};
 
+	const onClickItem = (index) => {
+		setActiveIndex(index)
+	}
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.card}>
@@ -48,7 +52,7 @@ export const App = () => {
 								}
 								key={id}
 							>
-								<button className={styles['steps-item-button']}>
+								<button className={styles['steps-item-button']} onClick={() => onClickItem(index)}>
 									{index + 1}
 								</button>
 								{title}
